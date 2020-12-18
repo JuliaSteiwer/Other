@@ -1,0 +1,36 @@
+                <!-- TEXT POSTS -->
+                {block:Text}
+                <!-- Post Title -->
+                {block:Title}
+                <div class="title">{Title}</div>
+                {/block:Title}
+                <!-- Post Body -->
+                {block:Body}
+                    <!-- Original Post -->
+                    {block:NotReblog}
+                        <div class="text">{Body}</div>
+                    {/block:NotReblog}
+                    <!-- Reblogged Post -->
+                    {block:RebloggedFrom}
+                        {block:Reblogs}
+                            <div class="t-username">
+                            {block:HasPermalink}
+                            <div class="user {block:IsDeactivated} inactive deactivated {/block:IsDeactivated}">
+                                <a target="_blank" class="user" href="{Permalink}" title="written by {Username}">
+                                    <span class="fas fa-user"></span>
+                                    {Username}
+                                </a>
+                            </div>
+                            {/block:HasPermalink}
+                            {block:HasNoPermalink}
+                            <span class="user {block:IsDeactivated} inactive deactivated {/block:IsDeactivated}">
+                                <span class="fas fa-user"></span>
+                                {Username}
+                            </span>
+                            {/block:HasNoPermalink}
+                            </div>
+                            <div class="text">{Body}</div>
+                        {/block:Reblogs}
+                    {/block:RebloggedFrom}
+                {/block:Body}
+                {/block:Text}
