@@ -1,2 +1,2 @@
 # Other
-Other codes relating to my tumblr codes.
+Other codes related to my tumblr codes.
